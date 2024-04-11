@@ -9,16 +9,17 @@
     <p>Hi there!</p>
     <p>Welcome to my mini blog, where I will take you on my travels around Eruope and Asia.</p>
 
-    <article>
-        <time>published: 11.04.2024, 16:53</time>
-        <h2><a href="">Paris Trip</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta nunc sit amet nulla pretium cursus. Suspendisse sit amet rutrum est. Praesent sagittis eget lorem id laoreet. Donec fringilla, libero id finibus laoreet, libero nibh scelerisque ligula, non euismod nibh risus ut risus. Aliquam iaculis augue condimentum, scelerisque purus ut, efficitur arcu. Duis dignissim metus non massa gravida, quis scelerisque libero vulputate. Vestibulum ultrices dui eget rutrum aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas et commodo elit. Suspendisse consequat sem eu felis interdum, eu finibus felis iaculis. Duis venenatis suscipit dictum. Ut mattis ligula in arcu feugiat, volutpat pellentesque turpis vestibulum. Sed accumsan arcu turpis, ac molestie leo accumsan sed. Etiam fermentum tortor accumsan, sagittis lectus vitae, luctus quam. Phasellus purus elit, molestie id convallis sed, pharetra eget est.</p>
-    </article>
-
-    <article>
-        <time>published: 11.04.2024, 16:53</time>
-        <h2><a href="">Barcelona Trip</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta nunc sit amet nulla pretium cursus. Suspendisse sit amet rutrum est. Praesent sagittis eget lorem id laoreet. Donec fringilla, libero id finibus laoreet, libero nibh scelerisque ligula, non euismod nibh risus ut risus. Aliquam iaculis augue condimentum, scelerisque purus ut, efficitur arcu. Duis dignissim metus non massa gravida, quis scelerisque libero vulputate. Vestibulum ultrices dui eget rutrum aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas et commodo elit. Suspendisse consequat sem eu felis interdum, eu finibus felis iaculis. Duis venenatis suscipit dictum. Ut mattis ligula in arcu feugiat, volutpat pellentesque turpis vestibulum. Sed accumsan arcu turpis, ac molestie leo accumsan sed. Etiam fermentum tortor accumsan, sagittis lectus vitae, luctus quam. Phasellus purus elit, molestie id convallis sed, pharetra eget est.</p>
-    </article>
+    {% for post in posts %}
+        <article>
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+<!--    <article>-->
+<!--        <time>published: 11.04.2024, 16:53</time>-->
+<!--        <h2><a href="">Barcelona Trip</a></h2>-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta nunc sit amet nulla pretium cursus. Suspendisse sit amet rutrum est. Praesent sagittis eget lorem id laoreet. Donec fringilla, libero id finibus laoreet, libero nibh scelerisque ligula, non euismod nibh risus ut risus. Aliquam iaculis augue condimentum, scelerisque purus ut, efficitur arcu. Duis dignissim metus non massa gravida, quis scelerisque libero vulputate. Vestibulum ultrices dui eget rutrum aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas et commodo elit. Suspendisse consequat sem eu felis interdum, eu finibus felis iaculis. Duis venenatis suscipit dictum. Ut mattis ligula in arcu feugiat, volutpat pellentesque turpis vestibulum. Sed accumsan arcu turpis, ac molestie leo accumsan sed. Etiam fermentum tortor accumsan, sagittis lectus vitae, luctus quam. Phasellus purus elit, molestie id convallis sed, pharetra eget est.</p>-->
+<!--    </article>-->
 </body>
 </html>
